@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/LuisBotelho/who_would_win/issues"
   },
-  "homepage": "https://github.com/LuisBotelho/who_would_win#readme"
+  "homepage": "https://github.com/LuisBotelho/who_would_win#readme",
+  "dependencies": {
+    "ejs": "^3.1.2",
+    "express": "^4.17.1"
+  }
 }
