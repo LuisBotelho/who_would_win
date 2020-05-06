@@ -1,0 +1,29 @@
+<%- include("../partials/header")%>
+
+
+
+<div class="text-center jumbotron bg-white">
+   
+    <h2>Add a New Category</h2>
+
+    <form action="/categories" method="POST">
+        <div class="form-group">                    
+            <input type="text" class="form-control" id="categoryName" name="name" placeholder="Category Name">
+        </div>
+        <div class="form-group">                    
+                <input type="text" class="form-control" id="categoryImage" name="image" placeholder="Image URL">
+        </div>
+
+        <div class="form-group">                    
+                <textarea rows="4" type="text" class="form-control" id="categoryDescription" name="description" placeholder="Description"></textarea>
+        </div>
+        <button class="btn btn-outline-primary btn-block">Submit!</button>
+
+    </form>
+
+
+
+
+</div>
+
+<%- include("../partials/footer")%>

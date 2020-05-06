@@ -1,13 +1,23 @@
 var express        = require("express")
     app            = express(),
-    methodOverride = require("method-override");
+	methodOverride = require("method-override"),
+	mongoose       = require("mongoose");
 
 app.set("view engine","ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 
 var indexRoutes = require("./routes/index"),
-    categoryRoutes = require("./routes/categories");
+	categoryRoutes = require("./routes/categories");
+	
+//Mongoose setup
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+mongoose.set('useUnifiedTopology', true);
+
+var db_url = process.env.DATABASEURL || "mongodb://localhost/who_would_win";
+mongoose.connect(db_url);
 
 
 app.use("/",indexRoutes);
