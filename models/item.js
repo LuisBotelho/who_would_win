@@ -18,4 +18,6 @@ var itemSchema = new mongoose.Schema({
     // },
         
     eloScore: Number
-})
+});
+
+module.exports = mongoose.model("Item",itemSchema);

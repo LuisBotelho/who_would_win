@@ -1,0 +1,14 @@
+<%- include("../partials/header")%>
+
+<div class="container">
+    <section class="header jumbotron text-center" style="background: url('<%= category.image %>') center center / cover no-repeat">
+        <div class="container">
+                <h1 class="display-3"><%= category.name %></h1>
+                <p class="lead"><%= category.description %></p>
+        </div>
+        
+        <a class="new-category btn btn-success" href="/categories/<%=category._id%>/items/new">Add a New Item</a>
+    </section>
+</div>
+
+<%- include("../partials/footer")%>

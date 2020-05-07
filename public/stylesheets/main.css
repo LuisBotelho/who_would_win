@@ -8,3 +8,20 @@ form{
     width:30%; 
     margin: 25px auto;
 }
+
+#main-header {
+  background: url("https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/08/Marvel-Vs.-DC.jpg") center center / cover no-repeat;
+  
+}
+
+.header h1, .header p{
+  
+  margin: 0;
+  color:white;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.new-category{
+  margin-top: 10px;
+} 
+

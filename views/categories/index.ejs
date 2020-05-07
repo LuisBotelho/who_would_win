@@ -1,8 +1,28 @@
 <%- include("../partials/header")%>
 
-<h1>Here are the categories</h1>
+<div class="container">
+    <section id="main-header" class="header jumbotron text-center">
+        <div class="container">
+                <h1 class="display-3">WHO WOULD WIN?</h1>
+                <p class="lead">This website is the ultimate place to decide who would win in a fight. </p>
+        </div>
+        
+        <a class="new-category btn btn-primary" href="categories/new">Add a New Category</a>
+    </section>
+    
+    <% categories.forEach(function(category){ %>
+        <section class="jumbotron text-center">
+            <h3><%=category.name%></h3>
+            <h6><%=category.description%></h3>
+            <a class="btn btn-primary" href="categories/<%=category._id%>">Read More</a>
 
-<a class="btn btn-primary" href="categories/new">Add a New Category</a>
+        </section>
+    <% }) %>
+
+
+
+</div>
+
 
 
 <%- include("../partials/footer")%>
