@@ -5,8 +5,8 @@
 <div class="text-center jumbotron bg-white">
    
     <h2>Add a New Item to "<%=category.name%>"</h2>
-
-    <form action="/categories" method="POST">
+    <p><%=category.id%></p>
+    <form action="/categories/<%=category.id%>/items" method="POST">
         <div class="form-group">                    
             <input type="text" class="form-control" name="name" placeholder="Item Name">
         </div>

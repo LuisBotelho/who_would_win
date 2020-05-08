@@ -1,7 +1,7 @@
 <%- include("../partials/header")%>
 
 <div class="container">
-    <section class="header jumbotron text-center" style="background: url('<%= category.image %>') center center / cover no-repeat">
+    <section class="header jumbotron text-center" style="background: url('<%= category.image %>') center 10px / cover no-repeat">
         <div class="container">
                 <h1 class="display-3"><%= category.name %></h1>
                 <p class="lead"><%= category.description %></p>
@@ -9,6 +9,24 @@
         
         <a class="new-category btn btn-success" href="/categories/<%=category._id%>/items/new">Add a New Item</a>
     </section>
+
+    <section class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% category.items.forEach(function(item){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="card">
+                    <img class="card-img-top" src="<%= item.image %>" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= item.name %></h5>
+                        <p class="card-text">Score: <%= item.eloScore %></p> 
+                    </div>
+                </div>
+            </div>
+        <%  }); %>
+        
+    </section>
+
+
+    
 </div>
 
 <%- include("../partials/footer")%>
